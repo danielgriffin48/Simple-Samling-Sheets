@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #333533;
+    background-color: #F5F0F6;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.header{
+    background-color: #223843;
+    color: #CFDBD5;
+    padding: 1em;
+    border-bottom-color: #F5CB5C;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+}
+.header h1 {
+    margin-top: 0;
+}
+footer {
+       /* Height of the footer */
+    background:#333533;
+    color: #CFDBD5;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 2em;
+}
+#content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.step {
+    margin-bottom: 1em;
+}
+.step > div {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.step h2{
+    width: 100%;
+    background-color: #F5CB5C;
+    padding: 0.5em;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+/* https://medium.com/@nerdplusdog/a-how-to-guide-for-modal-boxes-with-javascript-html-and-css-6a49d063987e */
+#party-modal {
+    display: none;
+    position: fixed;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    width: 75%;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+input, button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* https://stackoverflow.com/questions/17541614/use-images-instead-of-radio-buttons RADIO */
+[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+    cursor: pointer;
+    max-height: 100px;
+    max-width: 100px;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+    outline: 2px solid #f00;
+}
+
+.party-logo-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 1.5em;
+}
+
+.partyResult {
+    background: #d6d6b1;
+    color: #564D80;
+    display: flex;
+    margin-top: 0.1rem;
+    padding: 0.5rem .9rem .5rem .9rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.candidateContainer {
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.emblem {
+    height: 3rem;
+    width: 3rem;
+    margin-right: .5rem;
+    object-fit: contain;
+}
+.candidateName {
+    font-size: 1.3rem;
+    font-weight: bold;
+}

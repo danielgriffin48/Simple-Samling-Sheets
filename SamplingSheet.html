@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="NewStyle.css">
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript example</title>
+</head>
+
+<body>
+<div id="main-container">
+<header>
+    <div class="header">
+    <h1>
+        Simple Sampling Sheets
+    </h1>
+    </div>
+</header>
+<div id="content">
+<div class="step1 step">
+    <h2>1 - Add candidates</h2>
+    <div id="candidate-list-container"></div>
+    <div id="candidate-add-container">
+        <label for="newCandidateName"> New candidate name</label>
+        <input type="text" id="newCandidateName">
+        <button id="add-candidate-btn" onclick="addCandidate(this)">Select party</button></div>
+</div>
+<div class="step2 step">
+    <h2>2 - Select Formating</h2>
+    <div>
+        <label for="instructions">Local Imprint</label>
+        <input type="text" id="instructions">
+        <label for="imprint">Local Imprint</label>
+        <input type="text" id="imprint" value="Printed and promoted by">
+    </div>
+</div>
+<div class="step3 step">
+    <h2>3 - Print</h2>
+    <div>
+        <button id="print-button">Print sheet</button>
+    </div>
+</div>
+</div>
+
+<footer>
+    Simple Sample Sheets - built by Daniel Griffin
+</footer>
+</div>
+<div id="party-modal">
+    <div class="modal-content">
+        <h2> Select Party </h2>
+        <div class="party-logo-container">
+            <div class="party-logo-row">
+                <div>
+                    <label>
+                    <input type="radio" name="partyInput" value="Labour" id="52">
+                    <img src="./Images/52">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                    <input type="radio" name="partyInput" value="Conservative" id="7730">
+                    <img src="./Images/7730">
+                    </label>
+                </div>
+                <div>
+                <label>
+                    <input type="radio" name="partyInput" value="Liberal Democrat" id="106">
+                    <img src="./Images/106">
+                </label>
+                </div>
+            </div>
+            <div class="party-logo-row">
+                <label>
+                    <input type="radio" name="partyInput" value="Green Party" id="1119" >
+                    <img src="./Images/1119">
+                </label>
+                <label>
+                    <input type="radio" name="partyInput" value="UKIP" id="101" >
+                    <img src="./Images/101">
+                </label>
+                <label>
+                    <input type="radio" name="partyInput" value="Reform Party" id="7762">
+                    <img src="./Images/7762">
+                </label>
+            </div>
+            <input id="partySearchBar" placeholder="Enter party name">
+            <button id="add-party-button">Add party</button>
+            <ul id="resultsContainer"></ul>
+
+        </div>
+    </div>
+</div>
+</body>
+<script src="Data.js"></script>
+<script src="jspdf.js"></script>
+<script src="FormControls.js"></script>
+<script src="Autocomplete.js"></script>
+</html>
