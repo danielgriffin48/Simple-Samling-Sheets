@@ -181,7 +181,7 @@ let newCandidateName = document.getElementById("newCandidateName").value;
         doc.text(candidateName, left, topPadding);
     }
 
-    function drawSampleSheet(candidateList)
+    function drawSampleSheet()
     {
         drawHeader()
         drawAllCandidates()
