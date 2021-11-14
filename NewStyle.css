@@ -1,14 +1,19 @@
+html {
+    font-size: 35px;
+}
 body {
     margin: 0;
     font-family: sans-serif;
     color: #333533;
     background-color: #F5F0F6;
+    font-size: 40px;
 }
 
 #main-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    box-sizing: border-box;
 }
 .header{
     background-color: #223843;
@@ -78,6 +83,9 @@ footer {
 input, button {
     width: 100%;
     box-sizing: border-box;
+    margin-bottom: 0.2rem;
+    font-size: 1rem;
+    padding: 0.4rem;
 }
 
 /* https://stackoverflow.com/questions/17541614/use-images-instead-of-radio-buttons RADIO */
@@ -132,4 +140,14 @@ input, button {
 .candidateName {
     font-size: 1.3rem;
     font-weight: bold;
+}
+
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.5rem;
+}
+p{
+    font-size: 1rem;
 }
