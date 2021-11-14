@@ -99,8 +99,8 @@ input, button {
 /* IMAGE STYLES */
 [type=radio] + img {
     cursor: pointer;
-    max-height: 100px;
-    max-width: 100px;
+    max-height: 200px;
+    max-width: 200px;
 }
 
 /* CHECKED STYLES */
@@ -129,6 +129,10 @@ input, button {
     margin-bottom: 0.5rem;
     display: flex;
     flex-direction: row;
+}
+
+#candidate-list-container {
+    margin-bottom: 1.6rem;
 }
 
 .emblem {

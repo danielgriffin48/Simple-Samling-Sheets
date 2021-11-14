@@ -27,21 +27,34 @@
     if (selectedParty != null)
     {
         console.log(selectedParty, partyEmblemId);
+        document.getElementById("resultsContainer").innerHTML = "";
         hidePartyModal()
-        addCandidateToBallot(selectedParty, partyEmblemId)
+        addCandidateToBallot( selectedParty, partyEmblemId)
     }
-    // todo error code to go here if selectedparty is null
+    // todo error code to go here if selectedparty is nulln
 
 
 }
 function addCandidateToBallot(partyName, partyId=null)
 {
     let newCandidateName = document.getElementById("newCandidateName").value;
+    document.getElementById("newCandidateName").value = "";
+    document.getElementById("newCandidateName").placeholder = "Enter new candidate name";
+
     listOfCandidates.push(new Candidate(newCandidateName, partyName, partyId));
     const newCandidateDiv = document.createElement('div');
-    newCandidateDiv.innerHTML = '<div class="candidateContainer"><img id=' + partyId + ' class="emblem" src=./Images/' + partyId + ' ><div><div class="candidateName">' + newCandidateName + '</div>' +
-        '<div class="candidateParty"></div>' +
-        partyName + '</div></div>';
+    if (partyId === "None")
+    {
+        newCandidateDiv.innerHTML = '<div class="candidateContainer"><img id=' + partyId + ' class="emblem" ><div><div class="candidateName">' + newCandidateName + '</div>' +
+            '<div class="candidateParty"></div>' +
+            partyName + '</div></div>';
+    }
+    else {
+        newCandidateDiv.innerHTML = '<div class="candidateContainer"><img id=' + partyId + ' class="emblem" src=./Images/' + partyId + ' ><div><div class="candidateName">' + newCandidateName + '</div>' +
+            '<div class="candidateParty"></div>' +
+            partyName + '</div></div>';
+    }
+
     document.getElementById("candidate-list-container").appendChild(newCandidateDiv);
     hidePartyModal();
 }

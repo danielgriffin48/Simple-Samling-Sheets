@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="NewStyle.css">
     <meta charset="utf-8">
-    <title>Object-oriented JavaScript example</title>
+    <title>DanielGriffin - Simple Sampling Sheets</title>
 </head>
 
 <body>
@@ -21,15 +21,15 @@
     <div id="candidate-list-container"></div>
     <div id="candidate-add-container">
         <label for="newCandidateName"> New candidate name</label>
-        <input type="text" id="newCandidateName">
+        <input type="text" id="newCandidateName" placeholder="Enter new candidate name">
         <button id="add-candidate-btn" onclick="addCandidate(this)">Select party</button></div>
 </div>
 <div class="step2 step">
     <h2>2 - Select Formating</h2>
     <div>
-        <label for="instructions">Local Imprint</label>
+        <label for="instructions">Local instructions</label>
         <input type="text" id="instructions">
-        <label for="imprint">Local Imprint</label>
+        <label for="imprint" placeholder="Enter any additional instructions - optional">Local Imprint</label>
         <input type="text" id="imprint" value="Printed and promoted by">
     </div>
 </div>
@@ -91,8 +91,8 @@
     </div>
 </div>
 </body>
-<script src="Data.js"></script>
-<script src="jspdf.js"></script>
-<script src="FormControls.js"></script>
-<script src="Autocomplete.js"></script>
+<script src="./Data.js"></script>
+<script src="./jspdf.js"></script>
+<script src="./FormControls.js"></script>
+<script src="./Autocomplete.js"></script>
 </html>
